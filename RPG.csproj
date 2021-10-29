@@ -169,33 +169,19 @@
     <Resource Include="templates\UP.png" />
     <Resource Include="templates\UPDISABLED.png" />
     <Resource Include="templates\UPPRESSED.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="templates\DOORDISABLED.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="templates\STATBARENEMY.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="templates\MINUSHEALTH.png" />
     <Resource Include="templates\PLUSATTACK.png" />
     <Resource Include="templates\PLUSCURE.png" />
     <Resource Include="templates\PLUSEXPERIENCE.png" />
     <Resource Include="templates\PLUSHEALTH.png" />
     <Resource Include="templates\PLUSLEVEL.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="templates\STATBARHERO.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="templates\MINUSATTACK.png" />
     <Resource Include="templates\MINUSCURE.png" />
     <Resource Include="templates\MINUSEXPERIENCE.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="templates\WIN.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="templates\RIP.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
