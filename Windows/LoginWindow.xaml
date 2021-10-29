@@ -1,0 +1,20 @@
+﻿<Window x:Class="RPG.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="LoginWindow" Height="300" Width="500" ResizeMode="NoResize">
+    <Window.Background>
+        <ImageBrush ImageSource="/templates/BACK.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Your Name" TextAlignment="Center" Margin="130,10,130,10" Grid.Row="1" FontStyle="Italic" FontSize="25" Foreground="DarkSlateGray"/>
+        <TextBox Name="textBlockLogin" TextWrapping="Wrap" TextAlignment="Center" Text="" Margin="130,5,130,5" Padding="1,2,1,1" Grid.Row="2" FontStyle="Italic" FontSize="25" Foreground="DarkSlateGray" MaxLength="16" />
+        <Button Content="Play" Style="{DynamicResource TEXT}" Margin="130,5,130,5" Click="ButtonClickPlay" Grid.Row="3" FontStyle="Italic" FontSize="25" Foreground="DarkSlateGray"/>
+    </Grid>
+</Window>

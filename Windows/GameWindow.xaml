@@ -1,0 +1,90 @@
+﻿<Window
+        x:Class="RPG.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="GameWindow"  Height="550" Width="700" ResizeMode="NoResize">
+    <Window.Background>
+        <ImageBrush ImageSource="/templates/BACK.jpg"/>
+    </Window.Background>
+    <Grid>
+        <DockPanel>
+            <StatusBar DockPanel.Dock="Bottom" Height="30">
+                <TextBlock Name="textBlockHelpingText" FontWeight="Bold" FontSize="15" FontStyle="Italic"/>
+            </StatusBar>
+            <Menu Height="20" DockPanel.Dock="Top">
+                <MenuItem Header="Выход" Margin="0" Click="MenuItemClickExit" />
+                <MenuItem Header="О Игре" Margin="0" Click="MenuItemClickAbout"/>
+            </Menu>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Button Name="buttonExit" Style="{DynamicResource DOOR}" Grid.Row="1" Grid.Column="2" Margin="-10,0,-10,-20" Click="ExitClick" MouseEnter="MouseEnterAway" MouseLeave="MouseLeave"/>
+                <Button Name="buttonEnemy1" Style="{DynamicResource GRIFFIN}" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Margin="-20,0,-20,20" Click="Enemy1Click" MouseEnter="MouseEnterEnemy" MouseLeave="MouseLeave"/>
+                <Button Name="buttonEnemy2" Style="{DynamicResource DRAGON}" Grid.Row="1" Grid.Column="3" Grid.RowSpan="2" Margin="-20,0,-20,20" Click="Enemy2Click" MouseEnter="MouseEnterEnemy" MouseLeave="MouseLeave"/>
+                <Button Name="buttonHero" Style="{DynamicResource HERO}" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" Margin="-20,0,-20,-20" Click="HeroClick"  MouseEnter="MouseEnterHero" MouseLeave="MouseLeave"/>
+
+                <TextBlock Name="textBlockStatBarHero" Grid.Row="3" Grid.Column="3" Margin="0,0,-30,25" Padding="55,3,0,0" FontSize="16" FontStyle="Italic" Foreground="DarkSlateGray">
+                    <TextBlock.Background>
+                        <ImageBrush ImageSource="/templates/STATBARHERO.png" Stretch="Fill" />
+                    </TextBlock.Background>
+                </TextBlock>
+                <TextBlock Name="textBlockStatBarFirstEnemy" Grid.Row="0" Grid.Column="1" Margin="0,0,0,-10" Padding="45,1,0,0" FontSize="13" FontStyle="Italic" Foreground="DarkSlateGray">
+                    <TextBlock.Background>
+                        <ImageBrush ImageSource="/templates/STATBARENEMY.png" Stretch="Fill" />
+                    </TextBlock.Background>
+                </TextBlock>
+                <TextBlock Name="textBlockStatBarSecondEnemy" Grid.Row="0" Grid.Column="3" Margin="0,0,0,-10" Padding="45,1,0,0" FontSize="13" FontStyle="Italic" Foreground="DarkSlateGray">
+                    <TextBlock.Background>
+                        <ImageBrush ImageSource="/templates/STATBARENEMY.png" Stretch="Fill" />
+                    </TextBlock.Background>
+                </TextBlock>
+
+                <TextBlock Name="textBlockPlusHeroExperinece" Grid.Row="3" Grid.Column="4" Margin="30,30,0,90"  Padding="40,0,0,0" FontSize="16" FontStyle="Italic" Foreground="DarkSlateGray">
+                    <TextBlock.Background>
+                        <ImageBrush ImageSource="/templates/PLUSEXPERIENCE.png" Stretch="Fill" />
+                    </TextBlock.Background>
+                </TextBlock>
+                <TextBlock Name="textBlockPlusHeroHealth" Grid.Row="3" Grid.Column="4" Margin="30,70,0,50" Padding="40,0,0,0" FontSize="16" FontStyle="Italic" Foreground="DarkSlateGray">
+                    <TextBlock.Background>
+                        <ImageBrush ImageSource="/templates/PLUSHEALTH.png" Stretch="Fill" />
+                    </TextBlock.Background>
+                </TextBlock>
+                <TextBlock Name="textBlockMinusHeroHealth" Grid.Row="3" Grid.Column="4" Margin="30,50,0,70" Padding="40,0,0,0" FontSize="16" FontStyle="Italic" Foreground="DarkSlateGray">
+                    <TextBlock.Background>
+                        <ImageBrush ImageSource="/templates/MINUSHEALTH.png" Stretch="Fill" />
+                    </TextBlock.Background>
+                </TextBlock>
+
+                <TextBlock Name="textBlockMinusFirstEnemyHealth" Grid.Row="0" Grid.Column="0" Margin="70,15,-30,10" Padding="30,0,0,0" FontSize="16" FontStyle="Italic" Foreground="DarkSlateGray">
+                    <TextBlock.Background>
+                        <ImageBrush ImageSource="/templates/MINUSHEALTH.png" Stretch="Fill" />
+                    </TextBlock.Background>
+                </TextBlock>
+                <TextBlock Name="textBlockMinusSecondEnemyHealth" Grid.Row="0" Grid.Column="4" Margin="0,15,40,10" Padding="30,0,0,0" FontSize="16" FontStyle="Italic" Foreground="DarkSlateGray">
+                    <TextBlock.Background>
+                        <ImageBrush ImageSource="/templates/MINUSHEALTH.png" Stretch="Fill" />
+                    </TextBlock.Background>
+                </TextBlock>
+
+                <TextBlock Name="textBlockInfoText" Grid.Row="3" Grid.Column="1" Margin="-70,0,0,0" TextAlignment="Center" FontSize="15" FontStyle="Italic" Foreground="DarkSlateGray"/>
+
+                <Button Name="buttonUp" Style="{DynamicResource UP}" Grid.Row="0" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="1" Margin="40,0,40,0" Click="UpClick" MouseEnter="MouseEnterUp" MouseLeave="MouseLeave"/>
+                <Button Name="buttonLeft" Style="{DynamicResource LEFT}" Grid.Row="2" Grid.Column="0" Grid.RowSpan="1" Grid.ColumnSpan="1" Margin="0,20,80,20" Click="LeftClick"  MouseEnter="MouseEnterLeft" MouseLeave="MouseLeave"/>
+                <Button Name="buttonRight" Style="{DynamicResource RIGHT}" Grid.Row="2" Grid.Column="4" Grid.RowSpan="1" Grid.ColumnSpan="1" Margin="80,20,0,20" Click="RightClick" MouseEnter="MouseEnterRight" MouseLeave="MouseLeave"/>
+                <Button Name="buttonDown"  Style="{DynamicResource DOWN}" Grid.Row="4" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="1" Margin="40,0,40,0"  Click="DownClick" MouseEnter="MouseEnterLeft" MouseLeave="MouseLeave" />
+            </Grid>
+        </DockPanel>
+    </Grid>
+</Window>

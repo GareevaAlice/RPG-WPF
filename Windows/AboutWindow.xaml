@@ -1,0 +1,12 @@
+﻿<Window x:Class="RPG.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AboutWindow" Height="350" Width="700" ResizeMode="NoResize">
+    <Window.Background>
+        <ImageBrush ImageSource="/templates/BACK.jpg"/>
+    </Window.Background>
+    <Grid>
+        <TextBlock Name="textBlockAbout" TextWrapping="Wrap" Text="" FontStyle="Italic" Margin="50,40,50,50" FontSize="15" Foreground="DarkSlateGray"/>
+    </Grid>
+</Window>
+    

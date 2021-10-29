@@ -1,0 +1,4 @@
+﻿About:
+In this game, you should explore a randomly generated map of some dungeon, which size depends on the level of your character. On your way, you will come across enemies, with whom you have to fight. You can attack them if you click on them or cure yourself if you click on yourself. For killing enemies, you gain points of experience, which you can spend for increasing your health, healing or attacking strength after you find the exit and move to a new level. What is more, after every level your result is saved and the game can be continued sooner.
+This small game was created just in order to have some fun.
+Good luck.
